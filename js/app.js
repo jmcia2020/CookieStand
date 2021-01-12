@@ -10,6 +10,8 @@
 
 // Store hours: Opens 6am, Closes 7pm 
 var hourOfOp = ['6am', '7am', '8am', '9am', '10am', '11am', '12pm', '1pm', '2pm', '3pm', '4pm', '5pm', '6pm'];
+console.log('Show me hours of operation: ',hourOfOp);
+
 
 var storeOne = {
   city: 'Seattle',
@@ -31,18 +33,16 @@ var storeOne = {
   calcCookiesPerHour: function(){
     this.hourlyCust();
     for (var i = 0; i < hourOfOp.length; i++) {
-      //Create a variable to hold the cookies each hour
+          //Create a variable to hold the cookies each hour
       this.cookiesPerHour.push();
-      //this where we will keep running total of cookies.
-    }
-  },
+         //this where we will keep running total of cookies.
+    }  
+  }, //closes calcCookiesPerHour function
 
   render(){
-    this.calcCookiesPerHour
-//render object literal to the page
+    this.calcCookiesPerHour();
+       //render object literal to the page
   }
-
-  
 };
 
 storeOne.render();
@@ -58,11 +58,21 @@ storeOne.render();
 //   totalCookies: 0
 // };
 
-// setAge:   function() {
-// this.age = randomAge(3, 12) + 'Months old.';
-// }
-// };
-// petTwo.setAge();
+hourlyCust: function (){
+  for (var i = 0; i < hourOfOp.length; i++) {
+  this.custPerHour.push(random(this.minCustHour,this.maxCustHour));  
+  } 
+
+}, //closes hourlyCust function
+
+calcCookiesPerHour: function(){
+  this.hourlyCust();
+  for (var i = 0; i < hourOfOp.length; i++) {
+    //Create a variable to hold the cookies each hour
+    this.cookiesPerHour.push();
+    //this where we will keep running total of cookies.
+  }
+}
 
 // var storeThree = {
 //   city: 'Dubai',
@@ -103,8 +113,23 @@ return Math.floor(Math.random() * (max - min + 1)) + min;
   //create a new element the parent element of the child element that we will create to render the pet article in the html
 
 // var parentElement = document.getElementById('Stores');
-// // console.log(parentElement);
+// console.log(parentElement);
 
+<section></section>
+// create <section>
+var section = document.getElementById('storeOne');
+console.log(section)
+parentElement.appendChild(body);
+
+<ul></ul>
+// Create ul
+var ul = document.createElement('ul');
+ul.textContent = city.name;
+console.log (ul);
+
+ul.appendChild(section);
+
+<li> </li>
 // // Create <article>
 // var article = document.createElement('article');
 // // console.log(article);
@@ -122,9 +147,8 @@ return Math.floor(Math.random() * (max - min + 1)) + min;
 // petPara.textContent = 'Cats are adorable, and this cat is ' + petOne.age + ' old.';
 // article.appendChild(petPara);
 
-// // <ul>
-// var petUl = document.createElement('ul');
-// article.appendChild(petUl);
+// // 
+
 
 // for(var i = 0; i < petOne.interests.length; i++){
 //   var petLi = document.createElement('li');
