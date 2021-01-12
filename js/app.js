@@ -10,12 +10,8 @@
 
 // Display each stores data in a table format similar to what is below. Break each column by the hour and complete each row with a “Daily Location Total”.
 
-
-
-
-
 'use strict';
-console.log ('Salmon Cookies for Sale!')
+console.log ('Salmon Cookies for Sale!');
 
 Store.prototype.render = function(){
 
