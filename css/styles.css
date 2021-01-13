@@ -8,6 +8,7 @@ body{
 }
 
 h1{
+  padding-top: 35px;
   font-family: Sacramento;
   color:blanchedalmond;
   font-style: italic;
@@ -27,12 +28,19 @@ section{
 background-color: #D9BB78
 }
 
-table  {
-  background-color: rgb(247, 152, 10);
+table{
+  background-color: blanchedalmond;
   border-color: black;
 }
 
 th{
-  border-color: blue;
+  background-color: #774953;
+  border-color: white; 
+  border-style: solid;
+  color: white;
+  padding: 15px;
+}
+
+tr{
   padding: 10;
 }

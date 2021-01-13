@@ -36,7 +36,6 @@ FranchiseFactory.prototype.calcCookiesPerHour = function(){
 };
 
 
-
 //Run the render 
 FranchiseFactory.prototype.render = function(){
   this.calcCookiesPerHour();
@@ -63,10 +62,28 @@ function random(min, max){
 
 
 
-
+// CREATING THE TABLE
 
 // function makeFooterRow() {
-//   //This is in the video.
+var tableRow = document.createElement('tr');
+var tableHeader = document.createElement('th');
+tableHeader.textContent = 'Hourly Sales by Location';
+tableRow.appendChild(tableHeader);
+var dailyCookiesSold = 0;
+var hourlyCookiesSold = 0;
+for (var 1 =0; i < hoursOfOp.length; ++1) {
+  calcCookiesPerHour = 0;
+  for (var j = 0; j < FranchiseFactory.length; j++){
+    hourlyCookiesSold += FranchiseFactory.all[j].calcCookiesPerHour[i];
+    dailyCookiesSold += FranchiseFactory.all[j].calcCookiesPerHour[i];
+  }
+  tableHeader = document.createElement('th');
+  tableHeader.textContent = dailyCookiesSold;
+  tableRow.appendChild(tableHeader);
+  tableElement.appendChild(tableRow);
+};
+
+
 //   console.log('makeFooterRow');
 // }
 
