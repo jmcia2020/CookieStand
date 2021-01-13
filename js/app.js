@@ -31,12 +31,15 @@ Franchise.prototype.render = function(){
 };
 // Grab the Parent Element
 // create the child elements article, h2, p, ul, li, cookiesPerHour, custPerHour
-var parentElement.document.getElementById('storeID');
-appendChild(article);
+var parentElement = document.getElementById('storeID');
+// appendChild(article);
 
-function FranchiseFactory(storeID, city, minCustHour, maxCustHour, avgCookieSale, cookiesPerHour, custPerHour, totalCookies)
+function FranchiseFactory(storeID, city, minCustHour, maxCustHour, avgCookieSale){
 
-var newFranchise = [storeOne, storeTwo, storeThree, storeFour, storeFive]
+
+}
+var newFranchise = [storeOne, storeTwo, storeThree, storeFour, storeFive];
+console.log(newFranchise);
 
 
 // storeOne = {
@@ -46,4 +49,4 @@ var newFranchise = [storeOne, storeTwo, storeThree, storeFour, storeFive]
 //   avgCookieSale: 6.3,
 //   cookiesPerHour: [],
 //   custPerHour: [],
-//   totalCookies: 0,
+//   totalCookies: 0
