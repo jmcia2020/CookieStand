@@ -32,7 +32,7 @@ Franchise.prototype.render = function(){
 // Grab the Parent Element
 // create the child elements article, h2, p, ul, li, cookiesPerHour, custPerHour
 var parentElement = document.getElementById('storeID');
-// appendChild(article);
+// 
 
 function FranchiseFactory(storeID, city, minCustHour, maxCustHour, avgCookieSale){
 
