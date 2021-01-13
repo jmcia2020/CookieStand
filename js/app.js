@@ -16,7 +16,9 @@
 'use strict';
 console.log ('Salmon Cookies for Sale!');
 
-Store.prototype.render = function(){
+FranchiseFactory.all
+
+Franchise.prototype.render = function(){
 
   //Add a Table
   var franchiseTable = document.getElementById('');
