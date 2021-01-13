@@ -204,7 +204,7 @@ var storeFive = {
     ul.appendChild(listItem);
   }
 };
-storeFive.render();
+// storeFive.render();
 
 //
 function random(min, max){

@@ -9,6 +9,9 @@
 // Replace the lists of your data for each store and build a single table of data instead. It should look similar to the following:
 
 // Display each stores data in a table format similar to what is below. Break each column by the hour and complete each row with a “Daily Location Total”.
+// 1. Each cookie stand location should have a separate render() method that creates and appends its row to the table
+// 2.The header row and footer row are each created in their own stand-alone function
+// NOTE: Please use a header cell for both the header row ( containing store hours ), and the footer row ( hourly and grand totals across all stores ).
 
 'use strict';
 console.log ('Salmon Cookies for Sale!');
@@ -16,7 +19,7 @@ console.log ('Salmon Cookies for Sale!');
 Store.prototype.render = function(){
 
   //Add a Table
-  var franciseTable = document.getElementById('');
+  var franchiseTable = document.getElementById('');
   var cityRow =document.createElement('tr');
   // create element 
  
