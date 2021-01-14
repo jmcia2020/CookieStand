@@ -3,8 +3,8 @@ header{
   }
 
 body{
+  /* width: 90%; */
   background-color:#b86740;
-  opacity: 75%;
 }
 
 h1{
@@ -17,7 +17,9 @@ h1{
 }
 
 img{
-  width: 600px;
+  width: 640px;
+  padding-top: 50px;
+  padding-bottom: 50px;
 }
 
 h2{
@@ -25,19 +27,31 @@ font-family: Arial, Helvetica, sans-serif;
 }
 
 section{
-background-color: #D9BB78
+background-color: #D9BB78;
 }
 
 table{
   background-color: blanchedalmond;
+  padding-left: 10px;
   border-color: black;
+  font-size: large;
 }
 
 th{
   background-color: #774953;
-  border-color: white; 
+  border-color: blanchedalmond;
   border-style: solid;
   color: white;
+  margin: 10px;
+  padding: 15px;
+}
+
+td{
+  background-color: blanchedalmond;
+  border-color: black;
+  border-style: solid;
+  text-align: right;
+  margin: 10px;
   padding: 15px;
 }
 
