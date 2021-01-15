@@ -36,7 +36,7 @@ FranchiseFactory.prototype.calcCookiesPerHour = function(){
 };
 
 
-//Run the render 
+//Run the render
 FranchiseFactory.prototype.render = function(){
   this.calcCookiesPerHour();
   console.log('this is the render function');
@@ -61,11 +61,7 @@ FranchiseFactory.prototype.render = function(){
 
 FranchiseFactory.allFranchises = [];
 
-new FranchiseFactory('storeOne', 'Seattle', 23, 65, 6.3);
-new FranchiseFactory('storeTwo', 'Tokyo', 3, 24, 1.2);
-new FranchiseFactory('storeThree', 'Dubai', 11, 38, 3.7);
-new FranchiseFactory('storeFour', 'Paris', 20, 38, 2.3);
-new FranchiseFactory('storeFive', 'Lima', 2, 16, 4.6);
+
 //runs random for object methods above
 function random(min, max){
   return Math.floor(Math.random() * (max - min + 1)) + min;
@@ -110,11 +106,92 @@ function makeFooterRow() {
 
 
 //IIFE
-(function renderTable(){
+FranchiseFactory.renderTable = function(){
 // makeheaderRow(); in html
+
+  var tBody = document.getElementById('tbody');
+  tBody.innerHTML = '';
+
   for(var i = 0; i < FranchiseFactory.allFranchises.length; i++){
     FranchiseFactory.allFranchises[i].render();
   }
   makeFooterRow();
 
-})();
+};
+new FranchiseFactory('storeOne', 'Seattle', 23, 65, 6.3);
+new FranchiseFactory('storeTwo', 'Tokyo', 3, 24, 1.2);
+new FranchiseFactory('storeThree', 'Dubai', 11, 38, 3.7);
+new FranchiseFactory('storeFour', 'Paris', 20, 38, 2.3);
+new FranchiseFactory('storeFive', 'Lima', 2, 16, 4.6);
+
+
+FranchiseFactory.renderTable();
+
+// CREATE FORM
+
+
+//RENDER INFORMATION TO THE FORM
+
+
+//loop through the objects to show some information on the page.
+// for(var i = 0; i < adoptPet.length; i++){
+//   adoptPet[i].render();
+// }
+
+
+// //take in an event parameter so that we can prevent the default
+
+function handleFormSubmitted(event){ //opens handleFormSubmitted function
+  event.preventDefault();
+  console.log(event);
+
+  var storeIDInput = document.getElementById('storeID');
+  console.log (storeIDInput);
+
+  var storeIDValue = storeIDInput['value'];
+  console.log(storeIDInput['value']);
+  console.log(storeIDValue);
+
+  var cityInput = document.getElementById('city');
+  var cityValue = cityInput['value'];
+  console.log(cityValue);
+
+  var minCustHourInput = document.getElementById('minCustHour');
+  var minCustHourValue = minCustHourInput['value'];
+  console.log(minCustHourInput.value);
+
+  var maxCustHourInput = document.getElementById('maxCustHour');
+  var maxCustHourValue = maxCustHourInput.value;
+  console.log(maxCustHourValue);
+
+  var avgCookieSaleInput = document.getElementById('avgCookieSale');
+  console.log('we are looking for this',typeof(avgCookieSaleInput.value));
+  var avgCookieSaleValue = avgCookieSaleInput.value;
+  console.log(avgCookieSaleValue);
+
+
+  // gets us a new object(new pet)
+  var newCookieStore = new FranchiseFactory(storeIDValue, cityValue, minCustHourValue, maxCustHourValue, avgCookieSaleValue);
+
+  console.log('Opening now in', newCookieStore);
+  FranchiseFactory.renderTable();
+
+  //make use o prototypes
+  // newCookieStore.cookiesPerHour();
+  // newCookieStore.custPerHour();
+  // newCookieStore.totalCookies();
+
+  // newCookieStore.render();
+
+  var form = document.getElementById('newCookieStore');
+  form.reset();
+
+} //Closes the handleFormSubmitted function.
+
+// //Set up the event listener to listen to the submit event.
+// //1. which element do we need
+var formElement = document.getElementById('newCookieStore');
+
+// //2.which event am I listening for? The submission
+// //3. what code should I run when that event happens?
+formElement.addEventListener('submit',handleFormSubmitted);
