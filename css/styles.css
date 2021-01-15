@@ -112,8 +112,10 @@ button{
 }
 
 fieldset{
-  background-color: darkolivegreen;
-  border: #774953;
+  height 250px;
+  background-color: #774953;
+  border: rgb(38, 78, 38);
+  border-width: 2px;
 
 }
 
