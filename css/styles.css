@@ -23,9 +23,7 @@ h1{
 ul{
   background-color: black;
   list-style-type:none;
-  color: blanchedalmond;
-  
-  
+  color: blanchedalmond; 
 }
 
 li{
@@ -42,13 +40,14 @@ img{
 }
 
 h2{
-font-family: Arial;
-color: black;
-font-size: 30;
+font-family: Sacramento;
+color: #774953;
+font-size: 40px;
 font-weight: bolder;
-line-height: 2em;
+line-height: 1.5em;
 margin-left: 25px;
 font-style: bold;
+font-style: italic;
 }
 
 p{
@@ -72,15 +71,16 @@ background-color: #D9BB78;
 
 table{
   margin-top: 50px;
+  margin-left: 25px;
   background-color: blanchedalmond;
-  padding-left: 10px;
+  padding-left: 25px;
   border-color: black;
   font-size: large;
 }
 
 th{
   background-color: #774953;
-  border-color: blanchedalmond;
+  border-color: #774953;
   border-style: solid;
   color: white;
   margin: 10px;
@@ -98,4 +98,25 @@ td{
 
 tr{
   padding: 10;
+}
+
+
+button{
+  display:inline-block;
+  margin-left: 25px;
+  background-color burlywood;
+  font-size: 18px;
+  color: #774953;
+  height: 50px;
+  width: 100px;
+}
+
+fieldset{
+  background-color: darkolivegreen;
+  border: #774953;
+
+}
+
+label{
+
 }
