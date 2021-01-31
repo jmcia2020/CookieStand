@@ -4,6 +4,7 @@ var hourOfOp = ['6am', '7am', '8am', '9am', '10am', '11am', '12pm', '1pm', '2pm'
 //Grabs the table in html
 var tableElement = document.getElementById('franchiseTable');
 // console.log(tableElement);
+var tableBodyElement = document.getElementById('tbody');
 
 function FranchiseFactory(storeID, city, minCustHour, maxCustHour, avgCookieSale){
   this.storeId = storeID;
@@ -36,7 +37,6 @@ FranchiseFactory.prototype.calcCookiesPerHour = function(){
 };
 
 
-//Run the render
 FranchiseFactory.prototype.render = function(){
   this.calcCookiesPerHour();
   console.log('this is the render function');
@@ -56,13 +56,12 @@ FranchiseFactory.prototype.render = function(){
   var tableHeader = document.createElement('td');
   tableHeader.textContent = this.totalCookies;
   tableRow.appendChild(tableHeader);
-  tableElement.appendChild(tableRow);
+  tableBodyElement.appendChild(tableRow);
 };
 
 FranchiseFactory.allFranchises = [];
 
 
-//runs random for object methods above
 function random(min, max){
   return Math.floor(Math.random() * (max - min + 1)) + min;
 }
@@ -91,18 +90,9 @@ function makeFooterRow() {
   tableHeader = document.createElement('th');
   tableHeader.textContent = hourlyCookiesSold;
   tableRow.appendChild(tableHeader);
-  tableElement.appendChild(tableRow);
-
-  // tableDataElement = document.createElement('td');
-  //   tableDataElement.textContent = this.cookiesPerHour[i];
-  //   tableRow.appendChild(tableDataElement);
+  tableBodyElement.appendChild(tableRow);
 
 } //This closes the function.
-
-
-//   console.log('makeFooterRow');
-// }
-
 
 
 //IIFE
@@ -132,15 +122,6 @@ FranchiseFactory.renderTable();
 
 //RENDER INFORMATION TO THE FORM
 
-
-//loop through the objects to show some information on the page.
-// for(var i = 0; i < adoptPet.length; i++){
-//   adoptPet[i].render();
-// }
-
-
-// //take in an event parameter so that we can prevent the default
-
 function handleFormSubmitted(event){ //opens handleFormSubmitted function
   event.preventDefault();
   console.log(event);
@@ -169,29 +150,18 @@ function handleFormSubmitted(event){ //opens handleFormSubmitted function
   var avgCookieSaleValue = avgCookieSaleInput.value;
   console.log(avgCookieSaleValue);
 
-
-  // gets us a new object(new pet)
   var newCookieStore = new FranchiseFactory(storeIDValue, cityValue, minCustHourValue, maxCustHourValue, avgCookieSaleValue);
 
   console.log('Opening now in', newCookieStore);
   FranchiseFactory.renderTable();
 
-  //make use o prototypes
-  // newCookieStore.cookiesPerHour();
-  // newCookieStore.custPerHour();
-  // newCookieStore.totalCookies();
 
-  // newCookieStore.render();
 
   var form = document.getElementById('newCookieStore');
   form.reset();
 
-} //Closes the handleFormSubmitted function.
-
-// //Set up the event listener to listen to the submit event.
-// //1. which element do we need
+}
 var formElement = document.getElementById('newCookieStore');
 
-// //2.which event am I listening for? The submission
-// //3. what code should I run when that event happens?
+
 formElement.addEventListener('submit',handleFormSubmitted);
