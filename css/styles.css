@@ -16,28 +16,51 @@ h1{
   font-size: 100px;
 }
 
-/* h3{
+h3{
   display: inline;
-} */
+}
+
+nav{
+  background-color: black;
+  height: 30px;
+}
 
 ul{
-  background-color: black;
-  list-style-type:none;
-  color: blanchedalmond; 
+  margin-left: 10px;
+  line-height: 1.5em;
 }
 
 li{
-  display: -webkit-inline-box;
-  height: 30px;
+  display: inline-block;
+  padding: 3px 10px 3px 3px;
   color: blanchedalmond;
   font-family: Arial, Helvetica, sans-serif;
 }
 
-img{
-  width: 640px;
-  padding-top: 50px;
-  padding-bottom: 50px;
+a{
+  color: blanchedalmond; 
+  text-decoration: none;
 }
+
+img{
+  padding-top: 50 20 50 20;
+  /* padding-bottom: 50px; */
+}
+
+#pictures{
+  padding: 20px;
+  max-width: 1000px;
+  box-sizing: border-box;
+  display: flex;
+}
+
+#tshirt{
+  padding: 20px;
+  max-width: 1000px;
+  box-sizing: border-box;
+  display: flex;
+}
+
 
 h2{
 font-family: Sacramento;
@@ -51,7 +74,7 @@ font-style: italic;
 }
 
 p{
-  float: left;
+  /* float: left; */
   display: inline-block;
   margin-inline: 25px;
   font-family: Arial, Helvetica, sans-serif;
@@ -66,7 +89,7 @@ font-weight: bold;
 
 
 section{
-background-color: #D9BB78;
+background-color: blanchedalmond;
 }
 
 table{
@@ -104,7 +127,7 @@ tr{
 button{
   display:inline-block;
   margin-left: 25px;
-  background-color burlywood;
+  background-color:#D9BB78 burlywood;
   font-size: 18px;
   color: #774953;
   height: 50px;
@@ -112,13 +135,22 @@ button{
 }
 
 fieldset{
-  height 250px;
+  padding-top: 25px;
+  height: 150px;
   background-color: #774953;
   border: rgb(38, 78, 38);
   border-width: 2px;
 
 }
 
-label{
+legend{
+  margin-top: 25px;
+  padding-top: 50px;
+}
 
+footer{
+  background-color: #774953;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
 }
