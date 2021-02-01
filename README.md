@@ -23,5 +23,5 @@ Any Links you used as reference Reflections and Comments Consider including the 
 * Any Links you used as reference
 
 ### Reflections and Comments
-* Consider including the answers to your daily journal and submission questions here
-* This is also a good place to reflect on the tools and resources used and learned
+* Learned how to create a form and table in JavaScript. 
+* Learned how to utilitz specialieds fonts and make pictures adjust so they appear to be the same height across a page.
