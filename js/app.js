@@ -2,7 +2,7 @@
 console.log ('Salmon Cookies for Sale!');
 var hourOfOp = ['6am', '7am', '8am', '9am', '10am', '11am', '12pm', '1pm', '2pm', '3pm', '4pm', '5pm', '6pm'];
 //Grabs the table in html
-var tableElement = document.getElementById('franchiseTable');
+// var tableElement = document.getElementById('franchiseTable');
 // console.log(tableElement);
 var tableBodyElement = document.getElementById('tbody');
 
@@ -79,7 +79,7 @@ function makeFooterRow() {
   var hourlyCookiesSold = 0;
   for (var i =0; i < hourOfOp.length; i++) {
     dailyCookiesSold = 0;
-    for (var j = 0; j < FranchiseFactory.length; j++){
+    for (var j = 0; j < FranchiseFactory.allFranchises.length; j++){
       hourlyCookiesSold += FranchiseFactory.allFranchises[j].cookiesPerHour[i];
       dailyCookiesSold += FranchiseFactory.allFranchises[j].cookiesPerHour[i];
     } //This closes the first for loop.
@@ -162,6 +162,4 @@ function handleFormSubmitted(event){ //opens handleFormSubmitted function
 
 }
 var formElement = document.getElementById('newCookieStore');
-
-
 formElement.addEventListener('submit',handleFormSubmitted);
