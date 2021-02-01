@@ -25,3 +25,4 @@ Any Links you used as reference Reflections and Comments Consider including the 
 ### Reflections and Comments
 * Learned how to create a form and table in JavaScript. 
 * Learned how to utilitz specialieds fonts and make pictures adjust so they appear to be the same height across a page.
+* Learned debugging is difficult and that persistance is key.
